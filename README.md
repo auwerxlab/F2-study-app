@@ -19,6 +19,8 @@ tar -xzf F2_processed_data.tar.gz
 This creates the `Data/` folder the app reads at startup. Then install the pinned R dependencies and launch the app:
 
 ```r
+install.packages("renv")
+source("renv/activate.R")
 renv::restore()   # install the exact package versions from renv.lock (first run only)
 shiny::runApp()
 ```
